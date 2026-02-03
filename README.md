@@ -98,6 +98,37 @@ docker compose down
 docker compose down -v
 ```
 
+
+## Homework Questions
+
+Q3 SQL query
+```bash
+SELECT count(1) 
+FROM yellow_tripdata 
+WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2020;
+```
+Answer: 24,648,499
+
+
+Q4 SQL Query
+```bash
+SELECT count(1) 
+FROM green_tripdata 
+WHERE EXTRACT(YEAR FROM lpep_pickup_datetime) = 2020;
+```
+Answer: 1,734,051
+
+
+Q5 SQL Query
+```bash
+SELECT count(1) 
+FROM yellow_tripdata
+WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2021
+AND EXTRACT(MONTH FROM tpep_pickup_datetime) = 3;
+```
+Answer: 1,925,152
+
+
 ## License
 
 This project is part of the [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) homework.
